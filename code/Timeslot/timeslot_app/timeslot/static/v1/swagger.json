@@ -1,0 +1,171 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "description": "This service is named Timslot Service as it manages timeslots for all the available dentists",
+    "version": "1.0.0",
+    "title": "Timeslot Service",
+    "termsOfService": "http://swagger.io/terms/",
+    "contact": {
+      "email": "a.mahale@student.unsw.edu.au"
+    },
+    "license": {
+      "name": "Apache 2.0",
+      "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+    }
+  },
+  "basePath": "/v1",
+  "tags": [
+    {
+      "name": "Appointments"
+    }
+  ],
+  "consumes": [
+    "application/json"
+  ],
+  "paths": {
+    "/dentist/timeslot/{dname}": {
+      "get": {
+        "tags": [
+          "Appointments"
+        ],
+        "summary": "Returns the timeslot of the dentist",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "dname",
+            "type": "string",
+            "required": true,
+            "description": "Please provide dentist name."
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "answer": {
+                  "type": "string",
+                  "example": "A list of available timeslot of Oscar: Mon 9-10am, Mon 10-11am, Mon 11-12pm, Mon 12-13pm, Mon 13-14pm, Mon 14-15pm, Mon 15-16pm, Mon 16-17pm"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Dentist not found.",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "answer": {
+                  "type": "string",
+                  "example": "specified dentists was not found in the Database. Please check the name and try again "
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/dentist/{dname}/timeslot/{tslot}/cancel": {
+      "put": {
+        "tags": [
+          "Appointments"
+        ],
+        "summary": "Cancel an appointment by provding the timeslot",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "dname",
+            "type": "string",
+            "required": true,
+            "description": "Please provide the Dentist name."
+          },
+          {
+            "in": "path",
+            "name": "tslot",
+            "type": "string",
+            "required": true,
+            "description": "Enter the timeslot"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "answer": {
+                  "type": "string",
+                  "example": "You have successfully canceled Tue 16-17pm with Mike"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Dentist not found.",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "answer": {
+                  "type": "string",
+                  "example": "specified dentists was not found in the Database. Please check the name and try again "
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/dentist/{dname}/timeslot/{tslot}/reserve": {
+      "put": {
+        "tags": [
+          "Appointments"
+        ],
+        "summary": "Books an appoinment of a dentist",
+        "operationId": "userTokenCheck",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "dname",
+            "type": "string",
+            "required": true,
+            "description": "Enter your dentist."
+          },
+          {
+            "in": "path",
+            "name": "tslot",
+            "type": "string",
+            "required": true,
+            "description": "Enter your timeslot."
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "answer": {
+                  "type": "string",
+                  "example": "You have successfully booked Tue 16-17pm with Mike"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Dentist not found.",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "answer": {
+                  "type": "string",
+                  "example": "specified dentists was not found in the Database. Please check the name and try again "
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

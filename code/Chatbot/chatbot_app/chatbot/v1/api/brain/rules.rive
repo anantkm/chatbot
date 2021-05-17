@@ -1,0 +1,167 @@
+! version = 2.0
+! sub i'm     = i am
+! var user = "anotheruser"
+! var doctor = doctors
+! sub don't = do not 
+
++ hi
+- {random} Hello, human!|Hi|Hi there|hi user!{/random}
+- Hello human!
+- Hello!
+- Hi there!
+- Hey!
+- Hi!
+
++ [hi|hello|hey] there
+- {random} Hello, human!|Hi|Hi there|hi user!{/random}
+- Hello human!
+- Hello!
+- Hi there!
+- Hey!
+- Hi!
+
+
++ hello
+- {random} Hello, human!|Hi|Hi there|hi user!{/random}
+- Hello human!
+- Hello!
+- Hi there!
+- Hey!
+- Hi!
+
++ hey there
+- {random} Hello, human!|Hi|Hi there|hi user!{/random}
+- Hello human!
+- Hello!
+- Hi there!
+- Hey!
+- Hi!
+
++ hey 
+- {random} Hello, human!|Hi|Hi there|hi user!{/random}
+- Hello human!
+- Hello!
+- Hi there!
+- Hey!
+- Hi!
+
++ hi 
+- {random} Hello, human!|Hi|Hi there|hi user!{/random}
+- Hello human!
+- Hello!
+- Hi there!
+- Hey!
+- Hi!
+
++ [okay| ok | sure | ah]
+- :)
+
+
++ [help| need help | interact | example]
+- Hi, Hope you are you doing well. To begin you can type "List Available Dentists". If you still cannot figure out, please call the reception.
+
++ how are *
+- I am good, how are you?
+
++ i am doing *
+- Glad to know! How can I help you
+
++ what* your name
+- My name is MegaBot :D
+
++ my name is *
+- Nice to meet you <star>, I'm Ruby ;)
+
++ * bot
+- Hello human!
+- Hello!
+- Hi there!
+- Hey!
+- Hi!
+
++ reset 
+- RIVEresetCurrentStatus
+
++ make a new [booking|appointment]
+- RIVEresetCurrentStatus
+
++ i would like to make a new [booking|appointment]
+- RIVEresetCurrentStatus
+
+
++ where are you from
+- I’m from my country :)
+
++ my name is *
+- oh hey <star1>!
+
++ cb9322bid*
+- callforCancel
+
++ *cb9322bid*
+- callforCancel
+
++ * i do not [know|have] * 
+- I think you will have to call the clinic about the appointment
+
++ i do not [know|have] * 
+- I think you will have to call the clinic about the appointment
+
+
++ [i do not | do not ] [know | have it]
+- I think you will have to call the clinic about the appointment
+
+
++ sample commands
+- list all the doctors, make appointment with doctor, cancel an appointment
+
++ simple commands
+- list all the doctors, make appointment with doctor, cancel an appointment
+
+
++ i am [happy|excited|thrilled|fine| good| doing well | well ]
+- I'm happy too for you
+
+
++ [list all the doctor | show me all the doctor | show * doctor | * all the doctor | list all doctor | list * doctor | list doctor]
+- list
+
++ [list all the doctors | show me all the doctors | show * doctors | * all the doctors | list all doctors| list * doctors | list doctors]
+- list
+
++ [list all the dentist | show me all the dentis | show * dentist | * all the dentist | list all dentist | list * dentist | list dentist]
+- list
+
++ [list all the dentists | show me all the dentists | show * dentists | * all the dentists | list all dentists | list * dentists | list dentists ]
+- list
+
++ [list | show | show me | please show me ][available| the available][doctor|dentist|dentists|doctors][now|list| list now ]
+- list
+
++ [list | show | show me | please show me ][all| all the][available| the available][doctor|dentist|dentists|doctors][now|list| list now]
+- list
+
+
+
++ hi hello * 
+- Hey <star1>
+
++ [i would like to make a booking | like to make an booking|i would like to make booking | i would like to make a appointment| i would like to make appointment | i would like to make an appointment]
+- RiveCheckNameandTime
+
++ [hi|hey|hello|hey there|hola][i would like to make a booking | like to make an booking|i would like to make booking | i would like to make a appointment| i would like to make appointment | i would like to make an appointment]
+- RiveCheckNameandTime
+
++ [help me|please help me] make [booking|an appointment|a appointment|appointment] 
+- RiveCheckNameandTime
+
+
++ why you do not understand
+- I'm still learning. Please help me.
+
++ [thank you | thanks|thankyou|thanksyou]
+- thanksRESPONSE
+
++ [bye|good bye | until next time]
+- Bye. See you soon. 
+

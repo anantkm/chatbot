@@ -1,0 +1,51 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "description": "This is a API interface for the Dental Chatbot. One can list, make / cancel appointment using this chatbot.",
+    "version": "V1",
+    "title": "Dental Appointment Chatbot",
+    "termsOfService": "http://swagger.io/terms/",
+    "contact": {
+      "email": "a.mahale@student.unsw.edu.au"
+    },
+    "license": {
+      "name": "Apache 2.0",
+      "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+    }
+  },
+  "basePath": "/v1",
+  "paths": {
+    "/question": {
+      "get": {
+        "summary": "endpoint to recieve customer/ user queries",
+        "description": "this endpoint takes a query parameter named 'expression' and returns a json object with 'answer' as key",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "expression",
+            "description": "an example \u201cHi\u201d, \u201clist available doctors\u201d",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "answer": {
+                  "type": "string",
+                  "example": "How can I help you?"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

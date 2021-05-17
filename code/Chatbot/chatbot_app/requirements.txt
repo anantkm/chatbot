@@ -1,0 +1,6 @@
+Flask
+flask-cors
+Jinja2
+Flask-RESTful
+jsonschema
+six

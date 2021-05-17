@@ -1,0 +1,95 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "description": "This is Dentist Service. This service returns name of all the availables dentists and information about perticular dentist.",
+    "version": "1.0.0",
+    "title": "Dentist Service",
+    "termsOfService": "http://swagger.io/terms/",
+    "contact": {
+      "email": "a.mahale@student.unsw.edu.au"
+    },
+    "license": {
+      "name": "Apache 2.0",
+      "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+    }
+  },
+  "basePath": "/v1",
+  "tags": [
+    {
+      "name": "Appointments"
+    }
+  ],
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "paths": {
+    "/dentists": {
+      "get": {
+        "tags": [
+          "Appointments"
+        ],
+        "summary": "Lists all the available dentists",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "answer": {
+                  "type": "string",
+                  "example": "The available dentists: Mike, Jim, Kamala, Swati, Abhishek, Pratik, Morty"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/dentist/details/{dname}": {
+      "get": {
+        "tags": [
+          "Appointments"
+        ],
+        "summary": "Returns information about perticular dentist",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "dname",
+            "type": "string",
+            "required": true,
+            "description": "Enter your dentist."
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "answer": {
+                  "type": "string",
+                  "example": "Mike has specialized in Paediatric Dentistry and located at Chatswood"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Dentist not found.",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "answer": {
+                  "type": "string",
+                  "example": "specified dentists was not found in the Database. Please check the name and try again "
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

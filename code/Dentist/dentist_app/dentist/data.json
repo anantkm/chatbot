@@ -1,0 +1,54 @@
+{
+    "available": [
+        "Henry",
+        "Tim",
+        "Thomas",
+        "Kevin",
+        "Daniel",
+        "Mike",
+        "Ella",
+        "Andy",
+        "Tina",
+        "Jyoti"
+    ],
+    "Henry": {
+        "location": "Burwood",
+        "specialization": "Paediatric Dentistry"
+    },
+    "Jim": {
+        "location": "Kingsford",
+        "specialization": "Orthodontics"
+    },
+    "Thomas": {
+        "location": "Edmondson Park",
+        "specialization": "Orthodontist"
+    },
+    "Kevin": {
+        "location": "Kigscross",
+        "specialization": "Endodontist"
+    },
+    "Daniel": {
+        "location": "Newtown",
+        "specialization": "Paediatric Dentistry"
+    },
+    "Mike": {
+        "location": "Surry Hills",
+        "specialization": "Periodontist"
+    },
+    "Ella": {
+        "location": "Strathfield",
+        "specialization": "Endodontist"
+    },
+    "Andy": {
+        "location": "Summer Hill",
+        "specialization": "Prosthodontist"
+    },
+    "Tina": {
+        "location": "Ashfeild",
+        "specialization": "Periodontist"
+    },
+    "Jyoti": {
+        "location": "Liverpool",
+        "specialization": "Orthodontist"
+    }
+}
